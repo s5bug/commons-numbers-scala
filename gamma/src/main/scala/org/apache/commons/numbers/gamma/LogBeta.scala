@@ -1,0 +1,44 @@
+package org.apache.commons.numbers.gamma
+
+object LogBeta {
+
+  final val Ten = 10.0D
+  final val Two = 2.0D
+  final val Thousand = 1000.0D
+  final val HalfLogTwoPi = 0.9189385332046727D
+
+  final val Delta: IArray[Double] = IArray(
+    0.833333333333333333333333333333E-01D,
+    -0.277777777777777777777777752282E-04D,
+    0.793650793650793650791732130419E-07D,
+    -0.595238095238095232389839236182E-09D,
+    0.841750841750832853294451671990E-11D,
+    -0.191752691751854612334149171243E-12D,
+    0.641025640510325475730918472625E-14D,
+    -0.295506514125338232839867823991E-15D,
+    0.179643716359402238723287696452E-16D,
+    -0.139228964661627791231203060395E-17D,
+    0.133802855014020915603275339093E-18D,
+    -0.154246009867966094273710216533E-19D,
+    0.197701992980957427278370133333E-20D,
+    -0.234065664793997056856992426667E-21D,
+    0.171348014966398575409015466667E-22D
+  )
+
+  def deltaMinusDeltaSum(a: Double, b: Double): Double = {
+    ???
+  }
+
+  def sumMinusDeltaSum(a: Double, b: Double): Double = {
+    ???
+  }
+
+  def value(p: Double, q: Double): Double = {
+    ???
+  }
+
+  def logGammaMinusLogGammaSum(a: Double, b: Double): Double = {
+    ???
+  }
+
+}
