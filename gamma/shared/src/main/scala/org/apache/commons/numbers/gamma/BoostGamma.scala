@@ -459,7 +459,7 @@ object BoostGamma {
         sresult = -sresult
       }
 
-      result = Sum.of(-lgamma(z)).add(-Math.log(t)).add(LogPi).getAsDouble
+      result = Sum.of(-lgamma(nz)).add(-Math.log(t)).add(LogPi).getAsDouble
     } else if(z < RootEpsilon) {
       if(z == 0.0D) return Double.NaN
 
