@@ -439,7 +439,7 @@ object BoostGamma {
    * @param v assumed to be positive and an integer
    */
   def isOdd(v: Double): Boolean = {
-    (((-v).toLong) & 0x1) == 1
+    ((-v).toLong & 0x1) == 1
   }
 
   def lgamma(z: Double): Double =

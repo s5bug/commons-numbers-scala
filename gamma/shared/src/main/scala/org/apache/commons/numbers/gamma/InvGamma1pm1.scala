@@ -62,6 +62,7 @@ object InvGamma1pm1 {
       b = InvGamma1pM1B3 + t * b
       b = InvGamma1pM1B2 + t * b
       b = InvGamma1pM1B1 + t * b
+      b = 1.0 + t * b
 
       var c: Double = InvGamma1pM1C13 + t * (a / b)
       c = InvGamma1pM1C12 + t * c
