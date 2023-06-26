@@ -1,5 +1,8 @@
 ThisBuild / tlBaseVersion := "0.4"
 
+ThisBuild / organization := "tf.bug"
+ThisBuild / version := "1.1.0"
+
 ThisBuild / startYear := Some(2023)
 ThisBuild / licenses := Seq(License.Apache2)
 

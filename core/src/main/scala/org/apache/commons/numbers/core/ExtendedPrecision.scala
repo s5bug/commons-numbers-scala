@@ -38,7 +38,8 @@ object ExtendedPrecision {
   }
 
   def isNotNormal(a: Double): Boolean = {
-    val baisedExponent = (java.lang.Double.doubleToRawLongBits(a) >>> 52).toInt & ExpMask
+    // doubleToRawLongBits not available on ScalaJS
+    val baisedExponent = (java.lang.Double.doubleToLongBits(a) >>> 52).toInt & ExpMask
     (baisedExponent + CmpUnsignedMinus1) >= CmpUnsigned2046
   }
 
