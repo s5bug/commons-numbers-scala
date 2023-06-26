@@ -43,7 +43,7 @@ object InvGamma1pm1 {
   final val InvGamma1pM1C13 = -0.205633841697760710345015413002057E-06D
 
   def value(x: Double): Double = {
-    if(x < -0.5 || x > 0.5) {
+    if(x < -0.5 || x > 1.5) {
       throw new GammaException(GammaException.OutOfRange, x, -0.5, 1.5)
     }
 

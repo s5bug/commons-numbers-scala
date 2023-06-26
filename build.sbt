@@ -3,7 +3,7 @@ ThisBuild / tlBaseVersion := "0.4"
 ThisBuild / startYear := Some(2023)
 ThisBuild / licenses := Seq(License.Apache2)
 
-val Scala3 = "3.2.2"
+val Scala3 = "3.3.0"
 ThisBuild / crossScalaVersions := Seq(Scala3)
 ThisBuild / scalaVersion := Scala3
 ThisBuild / scalacOptions ++= Seq("-no-indent", "-old-syntax")
@@ -73,12 +73,20 @@ lazy val angle = crossProject(JVMPlatform, JSPlatform, NativePlatform)
   )
 
 lazy val gamma = crossProject(JVMPlatform, JSPlatform, NativePlatform)
-  .crossType(CrossType.Pure)
+  .crossType(CrossType.Full)
   .in(file("gamma"))
   .settings(
     name := "apache-commons-numbers-gamma",
     description := "Scala port of Apache Numbers Commons Gamma"
   )
+  .jvmSettings(
+    libraryDependencies ++= Seq(
+      "junit" % "junit" % "4.13.2" % Test,
+      "com.github.sbt" % "junit-interface" % "0.13.3" % Test,
+    )
+  )
+  .jsEnablePlugins(ScalaJSJUnitPlugin)
+  .nativeEnablePlugins(ScalaNativeJUnitPlugin)
   .dependsOn(core, fraction)
 
 lazy val combinatorics = crossProject(JVMPlatform, JSPlatform, NativePlatform)
